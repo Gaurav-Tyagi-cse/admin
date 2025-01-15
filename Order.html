@@ -25,10 +25,10 @@
             <img src="./AARTI LOGO.webp" style="width: 50px;"  alt="" srcset="">
         </div>
         <nav class="nav flex-column">
-            <a class="nav-link active" href="Dashboard.html">Dashboard</a>
+            <a class="nav-link " href="Dashboard.html">Dashboard</a>
             <a class="nav-link" href="slider.html">Slider</a>
             <a class="nav-link" href="About.html">About</a>
-            <a class="nav-link" href="Order.html">Order</a>
+            <a class="nav-link active" href="Order.html">Order</a>
             <a class="nav-link" href="product-details.html">Payment Details</a>
             <!-- <a class="nav-link" href="#">Content management</a> -->
             <a class="nav-link" href="Notification.html">Notification Communication</a>
@@ -48,14 +48,60 @@
                 <a class="navbar-brand text-white ms-3" href="#">Arti-Asta</a>
             </div>
         </nav>
-        <div class="container mt-4">
-            <h2>Go To Main Website</h2>
-            <a href="https://aartiastha.com/" class="btn btn-primary">Link</a>
+ <!-- Content -->
+ <div class="contents">
+    <h1>Order Details</h1>
+    
+    <!-- Order Details Card -->
+    <div class="card">
+        <div class="card-header">
+            <h4>Order #ORD12345</h4>
         </div>
+        <div class="card-body">
+            <h5 class="card-title">Customer Information</h5>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Phone:</strong> +91 1234567890</p>
+            <p><strong>Shipping Address:</strong> 123 Street, City, Country</p>
+
+            <h5 class="mt-4">Product Information</h5>
+            <p><strong>Product Name:</strong> Astrology Consultation</p>
+            <p><strong>Quantity:</strong> 1</p>
+            <p><strong>Price:</strong> ₹5000</p>
+            <p><strong>Total Amount:</strong> ₹5000</p>
+
+            <h5 class="mt-4">Payment Information</h5>
+            <p><strong>Payment Method:</strong> Credit Card</p>
+            <p><strong>Payment Status:</strong> Successful</p>
+            <p><strong>Payment ID:</strong> PAY12345</p>
+
+            <h5 class="mt-4">Order Status</h5>
+            <p><strong>Status:</strong> Shipped</p>
+            <p><strong>Tracking Number:</strong> TRACK98765</p>
+            <p><strong>Estimated Delivery:</strong> 2025-01-20</p>
+
+            <div class="mt-4">
+                <button class="btn btn-success" onclick="updateOrderStatus('shipped')">Mark as Delivered</button>
+                <button class="btn btn-danger" onclick="updateOrderStatus('cancelled')">Cancel Order</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
    <script src="./js/main.js"></script>
+   <script>
+    function updateOrderStatus(status) {
+        if (status === 'shipped') {
+            alert('Order marked as delivered.');
+        } else if (status === 'cancelled') {
+            alert('Order cancelled.');
+        }
+    }
+</script>
 </body>
 </html>
 

@@ -76,6 +76,13 @@
     background-color: #495057; 
 }
 
+
+.table-responsive {
+    overflow-x: auto; /* Enables horizontal scroll */
+    white-space: nowrap; /* Prevents content from wrapping */
+}
+
+
 /* Desktop view adjustments */
 @media (min-width: 1024px) {
     .sidebar {
