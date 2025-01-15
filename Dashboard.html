@@ -12,6 +12,55 @@
             font-family: 'Nunito', sans-serif;
             background-color: #fafbfe;
         }
+
+        .remaining-body {
+            position: relative;
+            overflow: hidden;
+            height: calc(100vh - 150px); /* Adjust this based on your content height */
+        }
+
+        .background-slideshow img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure images are not cut off */
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: fadeSlideshow 12s infinite;
+        }
+
+
+        .background-slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .background-slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .background-slideshow img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes fadeSlideshow {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
       
     </style>
     <link rel="stylesheet" href="style.css">
@@ -30,7 +79,7 @@
             <a class="nav-link" href="About.html">About</a>
             <a class="nav-link" href="Order.html">Order</a>
             <a class="nav-link" href="product-details.html">Payment Details</a>
-            <!-- <a class="nav-link" href="#">Content management</a> -->
+            
             <a class="nav-link" href="Notification.html">Notification Communication</a>
             <a class="nav-link" href="Billing.html">Billing</a>
             <a class="nav-link" href="contact.html">Contact</a>
@@ -40,6 +89,8 @@
             
         </nav>
     </div>
+
+    
 
     <div class="content" id="content">
         <nav class="navbar navbar-expand-lg">
@@ -51,6 +102,17 @@
         <div class="container mt-4">
             <h2>Go To Main Website</h2>
             <a href="https://aartiastha.com/" class="btn btn-primary">Link</a>
+
+           
+        </div>
+
+        <div class="remaining-body">
+            <div class="background-slideshow">
+                <!-- Add your image URLs here -->
+                <img src="1.png" alt="Image 1">
+                <img src="AARTI LOGO.webp" alt="Image 1">
+                
+            </div>
         </div>
     </div>
 
